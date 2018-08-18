@@ -4,9 +4,9 @@
   </div>
 </template>
 <script>
-  export default{
-    name:'Details_container'
-  }
+export default{
+  name: 'Details_container'
+}
 </script>
 <style>
 

@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <template>
   <div>
 
@@ -11,22 +12,32 @@
 
 <script>
 
-  export default {
-    name: 'Government',
-    data(){
-      return{
-        containers:[{message:'人口计生服务'},{message: '党员服务'},{message:'劳动就业'},{message:'民政救助'},
-          {message:'社会保障'},{message:'住房保障'},{message:'老年服务'},{message:'残疾人服务'},{message:'税务服务'},
-          {message:'生活服务'}]
-      }
-    },
-    mounted(){
-//      let box=document.getElementsByClassName('box');
-//      box[0].border-left='red';
-
-
+export default {
+  name: 'Government',
+  data () {
+    return {
+      containers: [{message: '人口计生服务'}, {message: '党员服务'}, {message: '劳动就业'}, {message: '民政救助'},
+        {message: '社会保障'}, {message: '住房保障'}, {message: '老年服务'}, {message: '残疾人服务'}, {message: '税务服务'},
+        {message: '生活服务'}]
     }
+  },
+  mounted () {
+    let box = document.getElementsByClassName('box');
+    for(let i=0;i<box.length;i++){
+      if(i%5==0)
+      box[i].style.borderLeftColor='red';
+      if(i%5==1)
+        box[i].style.borderLeftColor='blue';
+      if(i%5==2)
+        box[i].style.borderLeftColor='green';
+      if(i%5==3)
+        box[i].style.borderLeftColor='yellow';
+      if(i%5==4)
+        box[i].style.borderLeftColor='pink';
+    }
+
   }
+}
 </script>
 <style scoped>
 .box{

@@ -13,7 +13,7 @@
               <p>政府政策</p>
             </div>
             <div class="two_1">
-              <img src="../../static/img/ios/liucheng.png" class="two_2"alt="">
+              <img src="../../static/img/ios/liucheng.png" class="two_2" alt="">
               <p>办事流程</p>
             </div>
             <div class="two_1">
@@ -32,26 +32,36 @@
   </div>
 </template>
 <script>
-  export default{
-    name:'Details_li',
-    props:['person'],
-    data(){
-      return{
-        ok:null
-      }
-    },
-    methods:{
-      openDom(index){
-        if(this.ok===index){
-          this.ok=null;
-        }else{
-          this.ok=index;
-        }
-//       this.ok= this.ok===index?null:index
-      }
+export default{
+  name: 'Details_li',
+  props: ['person'],
+  data () {
+    return {
+      ok: null
     }
-
+  },
+  methods: {
+    openDom (index) {
+      if (this.ok === index) {
+        this.ok = null
+      } else {
+        this.ok = index
+      }
+      //       this.ok= this.ok===index?null:index
+    }
+  },
+  mounted () {
+    let box = document.getElementsByClassName('total')
+    for (let i = 0; i < box.length; i++) {
+      if (i % 5 === 0) { box[i].style.borderLeftColor = 'red' }
+      if (i % 5 === 1) { box[i].style.borderLeftColor = 'blue' }
+      if (i % 5 === 2) { box[i].style.borderLeftColor = 'green' }
+      if (i % 5 === 3) { box[i].style.borderLeftColor = 'yellow' }
+      if (i % 5 === 4) { box[i].style.borderLeftColor = 'pink' }
+    }
   }
+
+}
 </script>
 <style scoped>
   .total{
@@ -59,7 +69,7 @@
     margin: 0px auto;
     margin-top: 20px;
     padding-left: 10px;
-    border-left: 10px solid blueviolet;
+    border-left: 10px solid ;
     border-radius: 5px;
     background-color: #e0e0e0;
     padding-right: 10px;
