@@ -13,6 +13,8 @@ import Guide_footer from '../components/Guide_footer.vue'
 import Law_footer from '../components/Law_footer.vue'
 import life_footer from '../components/Life_footer.vue'
 import Style_footer from '../components/Style_footer.vue'
+import Details from '../components/Details.vue'
+import Details_container from '../components/Details_container.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -61,7 +63,8 @@ export default new Router({
     {
       path: '/government',
       name: 'government',
-      component:Government
+      component:Government,
+      children:[]
     },
     {
       path: '/life',
@@ -91,6 +94,16 @@ export default new Router({
       path: '/volunteer',
       name: 'Volunteer',
       component:Volunteer
+    },
+    {
+      path:'/government/details/:id',
+      name:'government_details',
+      component:Details
+    },
+    {
+      path:'/Details_container',
+      name:'Details_container',
+      component:Details_container
     }
 
   ]

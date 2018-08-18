@@ -1,8 +1,10 @@
 <template>
   <div>
-    <div class="box" v-for="item in containers">
+
+    <router-link tag='div' class="box" v-for="(item,index) in containers"  :to="{ name: 'government_details', params: { id: index+1 }}" :key="index">
       {{item.message}}
-    </div>
+    </router-link>
+
   </div>
 
 </template>
@@ -17,6 +19,12 @@
           {message:'社会保障'},{message:'住房保障'},{message:'老年服务'},{message:'残疾人服务'},{message:'税务服务'},
           {message:'生活服务'}]
       }
+    },
+    mounted(){
+//      let box=document.getElementsByClassName('box');
+//      box[0].border-left='red';
+
+
     }
   }
 </script>

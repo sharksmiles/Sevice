@@ -1,12 +1,13 @@
 <template>
   <div>
     <div v-if="$route.params.id==1">
+      <router-link to="/Details_container" tag="div">
       <div v-for="(item,index) in person1">
       <test :data="person1[index]">
         <button>我要加入</button>
       </test>
-
       </div>
+      </router-link>
     </div>
     <div v-if="$route.params.id==2">
       <div v-for="(item,index) in person2">
@@ -16,9 +17,7 @@
     </div>
     <div v-if="$route.params.id==3">
       <div v-for="(item,index) in person3">
-        <test :data="person3[index]">
-
-        </test>
+        <test :data="person3[index]"></test>
       </div>
     </div>
 
