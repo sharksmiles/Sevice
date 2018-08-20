@@ -1,8 +1,8 @@
 <template>
   <div class="bottom_footer">
     <div class="bottom_container">
-      <div class="bottom_container_left">
-       <img :src="data.url" >
+      <div class="bottom_container_left" :style="'background-image: url('+data.url+')'">
+
      </div>
      <div class="bottom_container_right">
       <h4>{{data.title}}</h4>
@@ -31,14 +31,25 @@
   .bottom_container_left{
     width: 30%;
     height: 100px;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-origin:content-box;
+    padding-left: 5px;
+
   }
-  .bottom_container_left img{
-    width: 80%;
-    height: 80%;
-    padding: 10px;
-  }
+
   .bottom_container_right{
     width: 70%;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .bottom_container_right h4{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
   }
   .bottom_container_right p{
     display: -webkit-box;
@@ -46,6 +57,7 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-right: 10px;
   }
 
   .bottom_footer button{

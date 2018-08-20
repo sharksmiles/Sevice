@@ -50,15 +50,22 @@ export default{
       //       this.ok= this.ok===index?null:index
     }
   },
+
   mounted () {
-    let box = document.getElementsByClassName('total')
+    let box = document.getElementsByClassName('total');
     for (let i = 0; i < box.length; i++) {
-      if (i % 5 === 0) { box[i].style.borderLeftColor = 'red' }
-      if (i % 5 === 1) { box[i].style.borderLeftColor = 'blue' }
-      if (i % 5 === 2) { box[i].style.borderLeftColor = 'green' }
-      if (i % 5 === 3) { box[i].style.borderLeftColor = 'yellow' }
-      if (i % 5 === 4) { box[i].style.borderLeftColor = 'pink' }
+      box[i].style.borderLeftColor='#7a80ff';
+      if(i%5==1)
+        box[i].style.borderLeftColor='orange';
+      if(i%5==2)
+        box[i].style.borderLeftColor='#22ac38';
+      if(i%5==3)
+        box[i].style.borderLeftColor='#f67a2f';
+      if(i%5==4)
+        box[i].style.borderLeftColor='pink';
     }
+
+
   }
 
 }
@@ -71,24 +78,26 @@ export default{
     padding-left: 10px;
     border-left: 10px solid ;
     border-radius: 5px;
-    background-color: #e0e0e0;
+    background-color: #FFFFFF;
     padding-right: 10px;
-
+    box-shadow: 0px 0px 5px  #888;
   }
 
   .one_boss{
     display: flex;
-    height: 50px;
-    line-height: 50px;
-    border-bottom: 1px solid silver;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
   }
   .ones{
     flex: 7;
+
   }
   .ones_right{
     flex: 2;
     text-align: right;
     padding-right: 10px;
+
   }
   .ones_right img{
     width: 15px;
@@ -99,6 +108,7 @@ export default{
   }
   .one_boss1{
     border-bottom: 1px solid silver;
+    border-top: 1px solid silver;
     display: flex;
   }
   .one_boss1 .two_1{

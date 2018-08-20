@@ -15,6 +15,7 @@ import life_footer from '../components/Life_footer.vue'
 import Style_footer from '../components/Style_footer.vue'
 import Details from '../components/Details.vue'
 import Details_container from '../components/Details_container.vue'
+import Red_property from '../components/Red_property.vue'
 Vue.use(Router);
 
 export default new Router({
@@ -104,6 +105,10 @@ export default new Router({
       path:'/Details_container',
       name:'Details_container',
       component:Details_container
+    },{
+      path:'/Red_property',
+      name:"/Red_property",
+      component:Red_property
     }
 
   ]

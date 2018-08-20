@@ -1,34 +1,34 @@
 <template>
 
   <div>
-    <div v-if="$route.params.id===1">
+    <div v-if="$route.params.id==1">
       <Details_li :person="person1" ></Details_li>
     </div>
-    <div v-if="$route.params.id===2">
+    <div v-if="$route.params.id==2">
       <Details_li :person="person2"></Details_li>
     </div>
-    <div v-if="$route.params.id===3">
+    <div v-if="$route.params.id==3">
       <Details_li :person="person3"></Details_li>
     </div>
-    <div v-if="$route.params.id===4">
+    <div v-if="$route.params.id==4">
       <Details_li :person="person4"></Details_li>
     </div>
-    <div v-if="$route.params.id===5">
+    <div v-if="$route.params.id==5">
       <Details_li :person="person5"></Details_li>
     </div>
-    <div v-if="$route.params.id===6">
+    <div v-if="$route.params.id==6">
       <Details_li :person="person6"></Details_li>
     </div>
-    <div v-if="$route.params.id===7">
+    <div v-if="$route.params.id==7">
       <Details_li :person="person7"></Details_li>
     </div>
-    <div v-if="$route.params.id===8">
+    <div v-if="$route.params.id==8">
       <Details_li :person="person8"></Details_li>
     </div>
-    <div v-if="$route.params.id===9">
+    <div v-if="$route.params.id==9">
       <Details_li :person="person9"></Details_li>
     </div>
-    <div v-if="$route.params.id===10">
+    <div v-if="$route.params.id==10">
       <Details_li :person="person10"></Details_li>
     </div>
   </div>

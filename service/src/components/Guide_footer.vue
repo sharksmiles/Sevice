@@ -1,26 +1,54 @@
 <template>
-  <div>
-  <test :data="pages[$route.params.id-1]"></test>
-
- </div>
+<div>
+  <div v-if="$route.params.id==1">
+  <div v-for="(items,indexs) in pages" >
+    <test  v-if="indexs===0" v-for="(item,index) in items" :data="item" :key="index" ></test>
+  </div>
+  </div>
+  <div v-if="$route.params.id==2">
+    <div v-for="(items,indexs) in pages" >
+      <test  v-if="indexs===1" v-for="(item,index) in items" :data="item" :key="index" ></test>
+    </div>
+  </div>
+  <div v-if="$route.params.id==3">
+    <div v-for="(items,indexs) in pages" >
+      <test  v-if="indexs===2" v-for="(item,index) in items" :data="item" :key="index" ></test>
+    </div>
+  </div>
+</div>
 </template>
+
 <script>
   import test from './test.vue'
   export default {
     name: 'Guide_footer',
-    props:{
-      titles:String
+    props: {
+      titles: String
     },
-    components:{test},
-    data(){
-      return{
-        pages:[{title:"湖北中盛汇金项目管理有限公司", content:"江岸区胜利街128号新源大夏4楼江岸区胜利街128号新源大夏4楼江岸区胜利街128号新源大夏4楼江岸区胜利街128号",url:"./../static/img/ios/1.png"}
-          ,{title:"湖北中盛汇金项目管理有限公司", content:"江江岸区胜利街128号新源大夏4楼江岸区胜利街128号",url:"./../static/img/ios/1.png"}
-          ,{title:"湖北中盛汇金项目管理有限公司", content:"江岸区胜利街1sdadsa十大大所多所多所所大撒128号新源大夏4楼江岸区胜利街128号",url:"http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=daf79f3d6a59252db71a15475cf2694e/d52a2834349b033b58bb81fd1fce36d3d539bde1.jpg"}]
+    components: {
+      test
+    },
+    data() {
+      return {
+        pages: [
+          [{url:'./../static/img/ios/1.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'1.1与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'},
+          {url:'./../static/img/ios/3.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'1.2与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'},
+          {url:'./../static/img/ios/2.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'1.3与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'}
+        ],
+          [{url:'./../static/img/ios/2.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'2.1与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'}
+           ,{url:'./../static/img/ios/2.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'2.2与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'}
+            ,{url:'./../static/img/ios/2.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'2.3与军运同行，开展全民健身。为了丰富社区居民zzzzzzzzzzzzzzzzz十九大阿斯达删掉倒计时第三季度赛欧'}
+
+          ],
+          [{url:'./../static/img/ios/2.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'3.1与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'},
+            {url:'./../static/img/ios/3.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'3.2与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'},
+            {url:'./../static/img/ios/1.png',title:'"与军运同行"全民健身--八股墩社区少时诵诗书所所所',content:'3.3与军运同行，开展全民健身。为了丰富社区居民十九大阿斯达删掉倒计时第三季度赛欧'}
+          ]]
       }
     }
   }
 </script>
+
 <style scoped>
 
 </style>

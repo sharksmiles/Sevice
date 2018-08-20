@@ -25,13 +25,13 @@ export default {
     let box = document.getElementsByClassName('box');
     for(let i=0;i<box.length;i++){
       if(i%5==0)
-      box[i].style.borderLeftColor='red';
+      box[i].style.borderLeftColor='#7a80ff';
       if(i%5==1)
-        box[i].style.borderLeftColor='blue';
+        box[i].style.borderLeftColor='orange';
       if(i%5==2)
-        box[i].style.borderLeftColor='green';
+        box[i].style.borderLeftColor='#22ac38';
       if(i%5==3)
-        box[i].style.borderLeftColor='yellow';
+        box[i].style.borderLeftColor='#f67a2f';
       if(i%5==4)
         box[i].style.borderLeftColor='pink';
     }
@@ -46,9 +46,10 @@ export default {
   border-radius: 10px;
   height: 50px;
   line-height: 50px;
-  background-color: lightgrey;
+  background-color: #FFFFFF;
   margin: 0 auto;
   padding-left: 10px;
   margin-top: 10px;
+  box-shadow: 0px 0px 5px  #888;
 }
 </style>

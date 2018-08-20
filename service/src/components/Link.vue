@@ -11,7 +11,6 @@
     name: 'alinkword',
     data(){
       return{
-
       }
     },
     props:['tar']
